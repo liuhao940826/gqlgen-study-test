@@ -2,6 +2,10 @@
 
 package models
 
+type Person interface {
+	IsPerson()
+}
+
 type NewTodo struct {
 	Text   string `json:"text"`
 	UserID string `json:"userId"`
@@ -9,13 +13,14 @@ type NewTodo struct {
 
 // 自己测试的玩家用户实体对象
 type Player struct {
-	// 玩家ID
-	ID string `json:"id"`
-	// 玩家名字
+	ID   string `json:"id"`
 	Name string `json:"name"`
-	// 玩家年龄
-	Age *int64 `json:"age"`
+	Age  int64  `json:"age"`
+	// 下面是玩家自己的属性,上面是继承Person的
+	Game string `json:"game"`
 }
+
+func (Player) IsPerson() {}
 
 // 用户注册入参实体对象
 type RegisterUser struct {
@@ -35,4 +40,9 @@ type Todo struct {
 type User struct {
 	ID   string `json:"id"`
 	Name string `json:"name"`
+	Age  int64  `json:"age"`
+	// 用户的地址
+	Address *string `json:"address"`
 }
+
+func (User) IsPerson() {}

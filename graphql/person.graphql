@@ -14,21 +14,9 @@
 #自定义类型  在scalar.graphql里面
 #int64 : 自定义的类型
 
-
-"自己测试的玩家用户实体对象"
-type Player implements Person{
+interface Person {
     id:ID!
     name:String!
     age:Int64!
-    "下面是玩家自己的属性,上面是继承Person的"
-    game:String!
 
-}
-
-"用户注册入参实体对象"
-input RegisterUser {
-  "注册用户名字"
-  name:String!
-  "注册用户年龄"
-  age: Int64!
 }

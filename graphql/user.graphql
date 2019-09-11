@@ -5,10 +5,14 @@ type Todo {
   user: User!
 }
 
-type User {
-  id: ID!
-  name: String!
+type User implements Person{
+  id:ID!
+  name:String!
+  age:Int64!
+  "用户的地址"
+  address:String
 }
+
 input NewTodo {
   text: String!
   userId: String!

@@ -4,6 +4,7 @@ import (
 	"context"
 	"self_gqlgen/gqlgen"
 	"self_gqlgen/models"
+	"self_gqlgen/service"
 )
 
 // THIS CODE IS A STARTING POINT ONLY. IT WILL NOT BE UPDATED WITH SCHEMA CHANGES.
@@ -24,6 +25,9 @@ func (r *mutationResolver) CreateTodo(ctx context.Context, input models.NewTodo)
 }
 func (r *mutationResolver) CreatePlayer(ctx context.Context, input models.RegisterUser) (*models.Player, error) {
 	panic("not implemented")
+
+	return service.RegisterPlayer(input)
+
 }
 
 type queryResolver struct{ *Resolver }
