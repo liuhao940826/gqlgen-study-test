@@ -18,7 +18,7 @@ autobind: []
 #告诉genhQL使用这个新的结构体
 models:
   Int64:
-    model: self_gqlgen/graphql.Int64
+    model: github.com/99designs/gqlgen/graphql.Int64
 
 
 
