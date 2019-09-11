@@ -16,9 +16,9 @@ resolver: #需要自己实现的解析器放在上面位置
   type: Resolver
 autobind: []
 #告诉genhQL使用这个新的结构体
-#models:
-#  Int64:
-#    model: self_gqlgen/graphql.Int64
+models:
+  Int64:
+    model: self_gqlgen/graphql.Int64
 
 
 
