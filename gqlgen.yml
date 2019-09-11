@@ -6,13 +6,13 @@
 #go run github.com/99designs/gqlgen -v 生成的指令
 
 schema:
-- graphql\*.graphql
+- graphql/*.graphql
 exec:  #告诉 gqlgen 生成的generated.go 服务放在哪里
-  filename: gqlgen\generated.go
+  filename: gqlgen/generated.go
 model: #告诉 gqlgen 生成的模型放在哪里
-  filename: models\models_gen.go
+  filename: models/models_gen.go
 resolver: #需要自己实现的解析器放在上面位置
-  filename: resolvers\resolver.go
+  filename: resolvers/resolver.go
   type: Resolver
 autobind: []
 #告诉genhQL使用这个新的结构体
