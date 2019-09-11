@@ -1,0 +1,34 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+
+#默认类型
+#Int：有符号 32 位整数。
+#Float：有符号双精度浮点值。
+#String：UTF‐8 字符序列。
+#Boolean：true 或者 false。
+#ID：ID 标量类型表示一个唯一标识符，通常用以重新获取对象或者作为缓存中的键。ID 类型使用和 String 一样的方式序列化；然而将其定义为 ID 意味着并不需要人类可读型。
+
+
+#自定义类型  在scalar.graphql里面
+#int64 : 自定义的类型
+
+
+"自己测试的玩家用户实体对象"
+type Player {
+    "玩家ID"
+    id :  ID!
+    "玩家名字"
+    name: String!
+    "玩家年龄"
+    age:  int64
+}
+
+"用户注册入参实体对象"
+input RegisterUser {
+  "注册用户名字"
+  name:String!
+  "注册用户年龄"
+  age: int64!
+}
