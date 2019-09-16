@@ -2,6 +2,8 @@
 #
 # https://gqlgen.com/getting-started/
 
+
+#这两个方法是graphql的入口不能丢失 需要自己按照语法写
 type Query{
   todos: [Todo!]!
   players: [Player!]!

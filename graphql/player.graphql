@@ -1,7 +1,3 @@
-# GraphQL schema example
-#
-# https://gqlgen.com/getting-started/
-
 
 #默认类型
 #Int：有符号 32 位整数。
@@ -13,6 +9,8 @@
 
 #自定义类型  在scalar.graphql里面
 #int64 : 自定义的类型
+
+
 
 
 "自己测试的玩家用户实体对象"

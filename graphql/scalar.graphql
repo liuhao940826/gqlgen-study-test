@@ -3,7 +3,7 @@
 # https://gqlgen.com/getting-started/
 
 
-#默认类型
+#graphql中的默认类型
 #Int：有符号 32 位整数。
 #Float：有符号双精度浮点值。
 #String：UTF‐8 字符序列。
@@ -11,5 +11,5 @@
 #ID：ID 标量类型表示一个唯一标识符，通常用以重新获取对象或者作为缓存中的键。ID 类型使用和 String 一样的方式序列化；然而将其定义为 ID 意味着并不需要人类可读型。
 
 
-#自定义类型
+#可以添加自定义类型
 scalar Int64
