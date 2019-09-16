@@ -21,18 +21,19 @@ func TestTestName(t *testing.T) {
 	})
 }
 
-//func TestSpec(t *testing.T) {
-//
-//	// Only pass t into top-level Convey calls
-//	convey.Convey("Given some integer with a starting value", t, func() {
-//		x := 1
-//
-//		convey.Convey("When the integer is incremented", func() {
-//			x++
-//
-//			convey.Convey("The value should be greater by one", func() {
-//				convey.So(x, convey.ShouldEqual, 2)
-//			})
-//		})
-//	})
-//}
+//如果是嵌套的 这个t 在嵌套的里面省略, 只需要在顶层的convey里面使用
+func TestSpec(t *testing.T) {
+
+	// Only pass t into top-level Convey calls
+	convey.Convey("Given some integer with a starting value", t, func() {
+		x := 1
+
+		convey.Convey("When the integer is incremented", func() {
+			x++
+
+			convey.Convey("The value should be greater by one", func() {
+				convey.So(x, convey.ShouldEqual, 2)
+			})
+		})
+	})
+}
