@@ -6,11 +6,6 @@ type Person interface {
 	IsPerson()
 }
 
-type NewTodo struct {
-	Text   string `json:"text"`
-	UserID string `json:"userId"`
-}
-
 // 自己测试的玩家用户实体对象
 type Player struct {
 	ID   string `json:"id"`
@@ -23,18 +18,11 @@ type Player struct {
 func (Player) IsPerson() {}
 
 // 用户注册入参实体对象
-type RegisterUser struct {
+type RegisterPlayerReq struct {
 	// 注册用户名字
 	Name string `json:"name"`
 	// 注册用户年龄
 	Age int64 `json:"age"`
-}
-
-type Todo struct {
-	ID   string `json:"id"`
-	Text string `json:"text"`
-	Done bool   `json:"done"`
-	User *User  `json:"user"`
 }
 
 type User struct {

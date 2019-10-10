@@ -10,9 +10,6 @@
 #自定义类型  在scalar.graphql里面
 #int64 : 自定义的类型
 
-
-
-
 "自己测试的玩家用户实体对象"
 type Player implements Person{
     id:ID!
@@ -24,9 +21,9 @@ type Player implements Person{
 }
 
 "用户注册入参实体对象"
-input RegisterUser {
-  "注册用户名字"
-  name:String!
-  "注册用户年龄"
-  age: Int64!
+input RegisterPlayerReq {
+    "注册用户名字"
+    name:String!
+    "注册用户年龄"
+    age: Int64!
 }

@@ -5,11 +5,9 @@
 
 #这两个方法是graphql的入口不能丢失 需要自己按照语法写
 type Query{
-  todos: [Todo!]!
   players: [Player!]!
 }
 
 type Mutation {
-  createTodo(input: NewTodo!): Todo!
-  createPlayer(input: RegisterUser!): Player!
+  createPlayer(input: RegisterPlayerReq!): Player!
 }

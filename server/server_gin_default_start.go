@@ -2,6 +2,7 @@ package main
 
 import "github.com/gin-gonic/gin"
 
+//这个是gin的
 func main() {
 	//这个是默认情况 不是用中间件 middleWare的情况下
 	r := gin.Default()

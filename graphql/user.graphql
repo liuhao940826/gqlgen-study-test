@@ -1,12 +1,3 @@
-
-#自定义的user模块参数
-type Todo {
-  id: ID!
-  text: String!
-  done: Boolean!
-  user: User!
-}
-
 type User implements Person{
   id:ID!
   name:String!
@@ -15,7 +6,4 @@ type User implements Person{
   address:String
 }
 
-input NewTodo {
-  text: String!
-  userId: String!
-}
+
